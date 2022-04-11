@@ -1,27 +1,27 @@
 variable "WINDOWS_TEMPLATE" {
-  default = "TEMPLATE-W2019"
+  default = "TemplateWin2k19STD"
   type    = string
 }
 variable "WINDOWS_CPU" {
-  default = "4"
+  default = "1"
 }
 variable "WINDOWS_MEN" {
-  default = "4096"
+  default = "2048"
 }
 variable "WINDOWS_FOLDER" {
   default = "WINDOWS"
 }
 variable "WINDOWS_VM_NAME" {
-  default = "VM-WIN-LAB"
+  default = "HWINTF01V"
 }
 variable "WINDOWS_INSTANCE" {
-  default = "6"
+  default = "1"
 }
 variable "WINDOWS_WORKGROUP" {
-  default = "TERRAFORM_LAB"
+  default = "GRUPOLIGHT"
 }
 variable "WINDOWS_PASSWORD" {
-  default = "Str0ngP@ssw0rd!"
+  default = "Light@01"
 
 }
 variable "WINDOWS_OS" {

@@ -1,5 +1,5 @@
 variable "LINUX_TEMPLATE" {
-  default = "TEMPLATE_CENTOS7"
+  default = "TemplateRH85"
   type    = string
 }
 variable "LINUX_CPU" {
@@ -12,23 +12,23 @@ variable "LINUX_FOLDER" {
   default = "LINUX"
 }
 variable "LINUX_VM_NAME" {
-  default = "VM-LNX-LAB"
+  default = "HLNXTF01V"
 }
 variable "LINUX_VM_DOMAIN" {
-  default = "lab-terraform"
+  default = "grupolight.local"
 }
 variable "LINUX_INSTANCE" {
-  default = "10"
+  default = "1"
 }
 variable "LINUX_USER" {
   default = "root"
 
 }
 variable "LINUX_TEMPLATE_PASSWORD" {
-  default = "PASS_TEMPLATE"
+  default = "rta_21@R"
 }
 variable "LINUX_OS" {
-  default = "CENTOS 7"
+  default = "RedHat 8.5"
 
 }
 variable "LINUX_job" {

@@ -1,10 +1,10 @@
 data "vsphere_virtual_machine" "template" {
-  name          = "/${var.datacenter}/vm/TEMPLATE/${var.WINDOWS_TEMPLATE}"
+  name          = "/${var.datacenter}/TEMPLATE/Windows/${var.WINDOWS_TEMPLATE}"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 resource "vsphere_folder" "folder" {
-  path          = "LAB/${var.WINDOWS_FOLDER}"
+  path          = "IAC_TERRAFORM/${var.WINDOWS_FOLDER}"
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
@@ -17,7 +17,7 @@ resource "vsphere_virtual_machine" "vm_WIN" {
   num_cpus         = var.WINDOWS_CPU
   memory           = var.WINDOWS_MEN
   guest_id         = data.vsphere_virtual_machine.template.guest_id
-  folder           = "LAB/${var.WINDOWS_FOLDER}"
+  folder           = "IAC_TERRAFORM/${var.WINDOWS_FOLDER}"
   scsi_type        = data.vsphere_virtual_machine.template.scsi_type
   firmware         = data.vsphere_virtual_machine.template.firmware
 

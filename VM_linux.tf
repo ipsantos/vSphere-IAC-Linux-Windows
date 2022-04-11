@@ -1,9 +1,9 @@
 data "vsphere_virtual_machine" "template_LNX" {
-  name          = "/${var.datacenter}/vm/TEMPLATE/${var.LINUX_TEMPLATE}"
+  name          = "/${var.datacenter}/TEMPLATE/Linux/${var.LINUX_TEMPLATE}"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 resource "vsphere_folder" "folder_linux" {
-  path          = "LAB/${var.LINUX_FOLDER}"
+  path          = "IAC_TERRAFORM/${var.LINUX_FOLDER}"
   type          = "vm"
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
@@ -29,7 +29,7 @@ resource "vsphere_virtual_machine" "vm_LNX" {
   num_cpus         = var.LINUX_CPU
   memory           = var.LINUX_MEN
   guest_id         = data.vsphere_virtual_machine.template_LNX.guest_id
-  folder           = "LAB/${var.LINUX_FOLDER}"
+  folder           = "IAC_TERRAFORM/${var.LINUX_FOLDER}"
   scsi_type        = data.vsphere_virtual_machine.template_LNX.scsi_type
   firmware         = data.vsphere_virtual_machine.template_LNX.firmware
 

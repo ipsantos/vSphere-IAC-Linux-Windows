@@ -18,6 +18,6 @@ data "vsphere_network" "network" {
 
 resource "tls_private_key" "privateSSH" {
   algorithm = "RSA"
-  rsa_bits  = 4096
+  rsa_bits  = 2048
 
 }
